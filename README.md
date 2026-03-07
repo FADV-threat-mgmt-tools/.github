@@ -29,7 +29,7 @@ The FADV Threat Management Tools team designs and maintains the engineering infr
 
 ### 🔍 Vulnerability Management
 - Automated scanning of applications, containers, cloud infrastructure, and endpoints.
-- Integration of scanner outputs (e.g., Qualys, Tenable, Prisma Cloud, Dependabot) into a unified findings pipeline.
+- Integration of scanner outputs (e.g., Qualys) into a unified findings pipeline.
 - Risk scoring, deduplication, and SLA tracking for discovered vulnerabilities.
 
 ### 🛡️ Threat Intelligence
@@ -63,14 +63,6 @@ This `.github` repository serves as the organizational home for:
 - **Organization-level community health files** – contributing guidelines, code of conduct, and security policy.
 
 ---
-
-## Getting Started
-
-If you are a developer or engineer onboarding to the FADV Threat Management Tools organization:
-
-1. Review the [SECURITY.md](./SECURITY.md) file (if present) for vulnerability disclosure guidelines.
-2. Explore the `.github/workflows/` directory for reusable scanning workflows.
-3. Reach out to the Threat Management team via the internal **#threat-management** Slack channel for questions or to request a threat model review.
 
 ---
 
