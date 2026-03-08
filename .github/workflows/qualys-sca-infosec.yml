@@ -1,0 +1,28 @@
+name: Qualys SCA Security Scan
+
+on:
+  push:           # Triggers on pushes to ALL branches
+  pull_request:   # Triggers for PRs from ANY branch
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+      issues: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Qualys Code Scan
+        uses: nelssec/qualys-code-scan@v1
+        with:
+          qualys_access_token: ${{ secrets.QUALYS_ACCESS_TOKEN }}
+          qualys_pod: ${{ vars.QUALYS_POD }}
+          continue_on_error: true
+          generate_sbom: true
+          sbom_format: both
+          scan_secrets: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
